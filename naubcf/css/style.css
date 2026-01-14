@@ -1,0 +1,57 @@
+
+  /* Root variables for consistent custom colors */
+  :root {
+    --navy: #1e3a5f;
+    --gold: #d4af37;
+  }
+
+  /* Custom utility classes that match your Tailwind extend */
+  .text-navy { color: var(--navy); }
+  .bg-navy   { background-color: var(--navy); }
+  .border-navy { border-color: var(--navy); }
+  .hover\:text-gold:hover { color: var(--gold); }
+  .text-gold { color: var(--gold); }
+  .bg-gold   { background-color: var(--gold); }
+
+  /* Improve sliding Bible verses carousel */
+  #verse-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .verse-slide {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    position: absolute;
+    inset: 0;                   /* top, right, bottom, left: 0 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .verse-slide.active {
+    opacity: 1;
+  }
+
+  /* Optional subtle glow on gold reference text for extra faith vibe */
+  .verse-slide .text-gold {
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+  }
+
+  /* Prevent content shift when verses change size */
+  .min-h-verse {
+    min-height: 12rem; /* fallback height */
+  }
+
+  /* Smooth hover on cards */
+  .program-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+  }
+
+  img-logo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
